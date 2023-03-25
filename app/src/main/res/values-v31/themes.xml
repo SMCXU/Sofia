@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Sofia" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/tvc_f5</item>
+        <item name="android:windowSplashScreenBackground">@color/tvc_f5</item>
+        <item name="android:windowSplashScreenAnimationDuration">500</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/tvc_f5</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/news_avd_v02</item>
+    </style>
+</resources>
