@@ -12,6 +12,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 /**
  * @author: Mr.U
@@ -20,13 +21,13 @@ import kotlinx.coroutines.launch
  */
 //用hilt吧，不用再额外处理viewModel的生命周期
 @HiltViewModel
-class MainViewModel : ViewModel() {
+class MainViewModel @Inject constructor() : ViewModel() {
     private val _state = mutableStateOf(MainPageState())
     val state: MutableState<MainPageState> = _state
     private var job: Job? = null
 
     fun getTabs() {
-        job =  viewModelScope.launch {
+        job = viewModelScope.launch {
             Log.d("MainViewModel", "getTabs: ${Thread.currentThread().name}")
             _state.value = _state.value.copy(isLoading = true)
             //太快了，阻塞一下
@@ -36,7 +37,7 @@ class MainViewModel : ViewModel() {
         }
     }
 
-    fun cancelRequest(){
+    fun cancelRequest() {
         job?.cancel()
         _state.value = _state.value.copy(isLoading = false)
 

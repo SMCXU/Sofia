@@ -1,6 +1,9 @@
 buildscript {
     ext {
-        compose_ui_version = '1.2.0'
+        compose_ui_version = '1.2.1'
+        hiltVersion = "2.44"
+        hiltCompilerVersion = "1.0.0"
+        hiltComposeVersion = "1.0.0"
     }
 }// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
