@@ -1,4 +1,4 @@
-package com.u.app.ui.page
+package com.u.app.ui.page.networktest
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
@@ -10,7 +10,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.u.app.network.model.LotteryTabModel
 import com.u.app.utils.showToast
 import com.u.sofia.HttpResult
 

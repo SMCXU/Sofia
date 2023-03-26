@@ -1,13 +1,11 @@
-package com.u.app.ui.page
+package com.u.app.ui.page.networktest
 
 import android.util.Log
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.u.app.network.model.LotteryTabModel
 import com.u.app.network.repository.UserRepository
-import com.u.sofia.HttpResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay

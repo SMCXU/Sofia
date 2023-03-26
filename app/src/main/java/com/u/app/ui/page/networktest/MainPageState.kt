@@ -1,4 +1,4 @@
-package com.u.app.ui.page
+package com.u.app.ui.page.networktest
 
 import com.u.app.network.model.LotteryTabModel
 import com.u.sofia.HttpResult
