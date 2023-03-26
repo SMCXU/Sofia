@@ -3,6 +3,7 @@ package com.u.app.ui.page.networktest
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.material.CircularProgressIndicator
+import androidx.compose.material.ScaffoldState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -10,6 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavHostController
 import com.u.app.utils.showToast
 import com.u.sofia.HttpResult
 
@@ -20,7 +22,10 @@ import com.u.sofia.HttpResult
  */
 
 @Composable
-fun MainFrame(viewModel: MainViewModel = hiltViewModel()) {
+fun MainFrame(
+    navCtrl: NavHostController,
+    scaffoldState: ScaffoldState,
+    viewModel: MainViewModel = hiltViewModel()) {
     val state by viewModel.state
     Box(
         modifier = Modifier
